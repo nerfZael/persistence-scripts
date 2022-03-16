@@ -1,4 +1,5 @@
 #!/bin/sh
+
 mkdir /home/ubuntu/polywrap
 git clone https://github.com/polywrap/nodes.git /home/ubuntu/polywrap
 
@@ -19,4 +20,5 @@ npm install pm2 -g
 pm2 startup
 yarn
 yarn build
+
 pm2 start bin/main.js api --http 8080
