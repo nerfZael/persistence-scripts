@@ -19,3 +19,4 @@ npm install pm2 -g
 pm2 startup
 yarn
 yarn build
+pm2 start bin/main.js api --http 8080
