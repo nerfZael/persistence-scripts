@@ -23,3 +23,4 @@ yarn
 yarn build
 
 pm2 start bin/main.js -- api --http 8080
+pm2 save
