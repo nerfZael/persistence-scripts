@@ -16,8 +16,7 @@ source ~/.profile
 npm install yarn -g
 npm install pm2 -g
 
-env PATH=$PATH:/home/ubuntu/.nvm/versions/node/v16.13.0/bin /home/ubuntu/.npm-global/
-lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu
+env PATH=$PATH:/home/ubuntu/.nvm/versions/node/v16.13.0/bin /home/ubuntu/.npm-global/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu
 
 yarn
 yarn build
