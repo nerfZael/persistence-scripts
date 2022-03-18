@@ -1,4 +1,11 @@
 #!/bin/sh
+
+wget https://dist.ipfs.io/go-ipfs/v0.12.0/go-ipfs_v0.12.0_linux-amd64.tar.gz
+tar -xvzf go-ipfs_v0.12.0_linux-amd64.tar.gz
+cd go-ipfs
+sudo bash install.sh
+cd ..
+
 mkdir /home/ubuntu/polywrap
 git clone https://github.com/polywrap/nodes.git /home/ubuntu/polywrap
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
@@ -20,6 +27,7 @@ yarn
 yarn build
 
 pm2 start bin/main.js -- api --http 8080
+pm2 start ipfs -- daemon
 
 pm2 startup
 sudo env PATH=$PATH:/home/ubuntu/.nvm/versions/node/v16.13.0/bin /home/ubuntu/.npm-global/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu
