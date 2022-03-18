@@ -27,8 +27,8 @@ yarn
 yarn build
 curl -o- https://raw.githubusercontent.com/nerfZael/persistence-scripts/main/.env > .env
 
-pm2 start bin/main.js -- api --http 8080
 pm2 start ipfs -- daemon
+pm2 start bin/main.js -- api --http 8080
 
 pm2 startup
 sudo env PATH=$PATH:/home/ubuntu/.nvm/versions/node/v16.13.0/bin /home/ubuntu/.npm-global/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu
