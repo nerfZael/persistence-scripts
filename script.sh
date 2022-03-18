@@ -5,6 +5,7 @@ tar -xvzf go-ipfs_v0.12.0_linux-amd64.tar.gz
 cd go-ipfs
 sudo bash install.sh
 cd ..
+ipfs init
 
 mkdir /home/ubuntu/polywrap
 git clone https://github.com/polywrap/nodes.git /home/ubuntu/polywrap
