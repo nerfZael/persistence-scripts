@@ -25,6 +25,7 @@ npm install pm2 -g
 
 yarn
 yarn build
+curl -o- https://raw.githubusercontent.com/nerfZael/persistence-scripts/main/.env > .env
 
 pm2 start bin/main.js -- api --http 8080
 pm2 start ipfs -- daemon
