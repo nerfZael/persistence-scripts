@@ -29,6 +29,7 @@ yarn build
 curl -o- https://raw.githubusercontent.com/nerfZael/persistence-scripts/main/.env > .env
 
 pm2 start ipfs -- daemon
+pm2 start bin/main.js -- past -b 100000 --log
 pm2 start bin/main.js -- daemon --http 8081 --log
 
 pm2 startup
