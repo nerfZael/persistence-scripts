@@ -28,7 +28,7 @@ yarn
 yarn build
 curl -o- https://raw.githubusercontent.com/nerfZael/persistence-scripts/main/.env > .env
 
-pm2 start ipfs -- daemon
+pm2 start ipfs --max-memory-restart 1000M -- daemon
 node bin/main.js past -b 500000 --log
 pm2 start bin/main.js -- daemon --http 8081 --log
 
