@@ -4,7 +4,7 @@ sudo apt-get update
 sudo apt-get install nginx
 sudo systemctl start nginx.service
 cd /etc/nginx/sites-available
-rm default
+sudo rm default
 sudo bash -c "curl -o- https://raw.gith
 ubusercontent.com/nerfZael/persistence-scripts/main/nginx.conf > default"
 sudo nginx -s reload
