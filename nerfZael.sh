@@ -8,12 +8,12 @@ cd ..
 ipfs init
 
 mkdir /home/ubuntu/polywrap
-git clone https://github.com/nerfZael/nodes.git /home/ubuntu/polywrap
+git clone https://github.com/nerfZael/nodes.git /home/ubuntu/polywrap/nodes
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 export NVM_DIR=$HOME/.nvm;
 source $NVM_DIR/nvm.sh;
 
-cd /home/ubuntu/polywrap/nodes/persistence-node
+cd /home/ubuntu/polywrap/nodes/nodes/persistence-node
 nvm install && nvm use
 
 mkdir ~/.npm-global
