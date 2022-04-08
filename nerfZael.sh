@@ -1,7 +1,7 @@
 #!/bin/sh
 
 sudo apt-get update
-sudo apt-get install nginx -y
+sudo apt-get -y install nginx
 sudo systemctl start nginx.service
 cd /etc/nginx/sites-available
 sudo rm default
