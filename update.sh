@@ -1,5 +1,4 @@
 #!/bin/sh
-export PATH="$PATH:/home/***/.nvm/versions/node/v16.13.0/bin/pm2:/home/***/.nvm/versions/node/v16.13.0/bin/pm2"
 pm2 delete all
 
 set -e
