@@ -1,13 +1,5 @@
 #!/bin/sh
 
-bash -c "wget https://dist.ipfs.io/go-ipfs/v0.12.0/go-ipfs_v0.12.0_linux-amd64.tar.gz"
-tar -xvzf go-ipfs_v0.12.0_linux-amd64.tar.gz
-cd go-ipfs
-sudo bash install.sh
-cd ..
-ipfs init
-
-
 sudo apt-get update
 sudo apt-get -y install nginx
 sudo systemctl start nginx.service
@@ -16,6 +8,13 @@ sudo rm default
 sudo bash -c "curl -o- https://raw.githubusercontent.com/nerfZael/persistence-scripts/main/nginx.conf > default"
 sudo nginx -s reload
 
+cd /home/ubuntu
+wget https://dist.ipfs.io/go-ipfs/v0.12.0/go-ipfs_v0.12.0_linux-amd64.tar.gz
+tar -xvzf go-ipfs_v0.12.0_linux-amd64.tar.gz
+cd go-ipfs
+sudo bash install.sh
+cd ..
+ipfs init
 
 mkdir /home/ubuntu/polywrap
 git clone https://github.com/nerfZael/nodes.git /home/ubuntu/polywrap/nodes
