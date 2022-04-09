@@ -8,7 +8,7 @@ sudo rm default
 sudo bash -c "curl -o- https://raw.githubusercontent.com/nerfZael/persistence-scripts/main/nginx.conf > default"
 sudo nginx -s reload
 
-wget https://dist.ipfs.io/go-ipfs/v0.12.0/go-ipfs_v0.12.0_linux-amd64.tar.gz
+sudo wget https://dist.ipfs.io/go-ipfs/v0.12.0/go-ipfs_v0.12.0_linux-amd64.tar.gz
 tar -xvzf go-ipfs_v0.12.0_linux-amd64.tar.gz
 cd go-ipfs
 sudo bash install.sh
