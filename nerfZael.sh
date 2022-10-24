@@ -17,7 +17,9 @@ cd ..
 ipfs init
 
 mkdir /home/ubuntu/polywrap
-git clone https://github.com/nerfZael/nodes.git /home/ubuntu/polywrap/nodes
+mkdir /home/ubuntu/polywrap/nodes
+mkdir /home/ubuntu/polywrap/nodes/nodes
+
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 export NVM_DIR=$HOME/.nvm;
 source $NVM_DIR/nvm.sh;
