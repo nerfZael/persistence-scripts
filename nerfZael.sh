@@ -16,6 +16,7 @@ sudo bash install.sh
 cd ..
 ipfs init
 
+mkdir /home/ubuntu/data
 mkdir /home/ubuntu/polywrap
 mkdir /home/ubuntu/polywrap/nodes
 mkdir /home/ubuntu/polywrap/nodes/nodes
